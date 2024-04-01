@@ -104,7 +104,7 @@ def zeckConvertToString(chromosome):
     #print("chromosome:",newChr)
     return newChr   
 
-def zirkofDonusum(chromosome):
+def zeckConversion(chromosome):
     #print("chromosome",chromosome, zeckConvertToDecimal(str(chromosome)))
     #print("chromosome:",chromosome)
     continuee=True
@@ -114,7 +114,7 @@ def zirkofDonusum(chromosome):
             #print("i:",i)
             if chromosome[i]=="1" and chromosome[i+1]=="0" and chromosome[i+2]=="0":
                 chromosome = chromosome[0:i] +"011"+chromosome[i+3:zeckGenCount+1]
-                devam=True
+                continuee=True
                 break;
     #print("chromosome", chromosome, zeckConvertToDecimal(str(chromosome)))
     return chromosome
@@ -154,19 +154,12 @@ globalMaxChromosomeValue=0
 zeckGlobalMaxChromosomeValue=0
 zeckGlobalMaxChromosomeValueZD=0
 
-maxKromozomDegeriArtisi=0
-maxFitnessDegeriArtisi=0
-ToplamFitnessDegeriArtisi=0
-maxToplamFitnessDegeri=0
-fiboMaxToplamFitnessDegeri=0
-fiboMaxToplamFitnessDegeriZD=0
-
 epoch=1
 
 for i in range(population):
         zeckStringChromosomes[i]=zeckConvertToString(zeckChromosomes[i])
         kzeckStringChromosomes[i]=zeckConvertToString((kzeckChromosomes[i]))
-        kzeckStringChromosomes[i]=zirkofDonusum(kzeckStringChromosomes[i])
+        kzeckStringChromosomes[i]=zeckConversion(kzeckStringChromosomes[i])
 
 mutationRate=((math.sqrt(5)-1)/2)
 epochCount=50
@@ -182,7 +175,7 @@ while epoch<epochCount:
     for i in range(population):
         zeckStringChromosomes[i]=zeckConvertToString(zeckChromosomes[i])
         kzeckStringChromosomes[i]=zeckConvertToString((kzeckChromosomes[i]))
-        kzeckStringChromosomes[i]=zirkofDonusum(kzeckStringChromosomes[i])
+        kzeckStringChromosomes[i]=zeckConversion(kzeckStringChromosomes[i])
     # print("Fib chromosomes 1:",zeckStringChromosomes)
     # print("Fib chromosomesZD:",kzeckStringChromosomes)
     
@@ -284,7 +277,7 @@ while epoch<epochCount:
     
     for i in range(population):
         zeckStringChromosomes[i]=zeckConvertToString(zeckChromosomes[i])
-        kzeckStringChromosomes[i]=zirkofDonusum(zeckStringChromosomes[i])
+        kzeckStringChromosomes[i]=zeckConversion(zeckStringChromosomes[i])
     #print("Zeck String Chromosomes:",zeckStringChromosomes)
     
     for i in range(int(population/2)):
@@ -350,6 +343,3 @@ print("Increase Rate in Max Chromosome Fitness Value")
 print("Genetic - Zeckendorf      : %",(zeckGlobalMaxFitnessValue-globalMaxFitnessValue)*100/globalMaxFitnessValue)
 print("Genetic - k-Zeckendorf    : %",(zeckGlobalMaxFitnessValueZD-globalMaxFitnessValue)*100/globalMaxFitnessValue)
 print("Zeckendorf - k-Zeckendorf : %",(zeckGlobalMaxFitnessValueZD-zeckGlobalMaxFitnessValue)*100/zeckGlobalMaxFitnessValue)
-
-# print("Global Toplam Fitness Değeri:", totalFitness, " Fibo Toplam Fitness Değeri: ", zeckTotalFitness)
-# print("Nesilde Toplam Fitness Değerinde Sağlanan Artış Oranı : %",(zeckTotalFitness-totalFitness)*100/totalFitness)
