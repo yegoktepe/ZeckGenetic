@@ -13,3 +13,7 @@ The model is rigorously evaluated across a spectrum of optimization challenges, 
 The outcomes highlight the substantial enhancement in chromosome representation efficacy achieved through Fibonacci encoding and Zeckendorf representations, thereby enhancing the overall performance of genetic algorithms. 
 
 This study underscores the prospect of further investigation and application of Fibonacci numbers and Zeckendorf representations in the domain of genetic algorithms.
+
+About The Codes
+
+The file named abc contains the codes written for the 5th degree polynomial problem. When the codes are run, the "initial.py" file is called to initialize the variables and values used in the program.
