@@ -16,4 +16,6 @@ This study underscores the prospect of further investigation and application of 
 
 About The Codes
 
-The file named abc contains the codes written for the 5th degree polynomial problem. When the codes are run, the "initial.py" file is called to initialize the variables and values used in the program.
+The file named "zeckGenetic.py" contains the codes written for the 5th degree polynomial problem. When the codes are run, the "initial.py" file is called to initialize the variables and values used in the program.
+
+When the program is run, the polynomial coefficients are first entered by the user so that the 5th degree polynomial can be created by the user.
