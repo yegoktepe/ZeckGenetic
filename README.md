@@ -1,5 +1,5 @@
 # ZeckGenetic
-Fibonacci encoded Zeckendorf representations in Genetic algorithm
+Fibonacci encoded Zeckendorf representations in Genetic algorithm.
 
 
 Genetic algorithms are a prevalent tool for addressing intricate optimization problems. 
