@@ -1,7 +1,6 @@
 # ZeckGenetic
 Fibonacci encoded Zeckendorf representations in Genetic algorithm
 
-
 Genetic algorithms are a prevalent tool for addressing intricate optimization problems. 
 
 This research presents a novel genetic algorithm model that employs Fibonacci encoding and k-Zeckendorf representations to refine chromosome representation in optimization tasks. 
